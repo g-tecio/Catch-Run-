@@ -13,6 +13,7 @@ public class Player : MonoBehaviour {
 	public float dirLessX = -100f;
 	public float moveSpeed = 300;
 	bool touchButton = false;
+	float rotateSpeed = 20.0f;
 
 	void Start () {
 		player = GetComponent<Rigidbody2D>();
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour {
 	public void Jump(){
 		if(grounded == true){
 			player.AddForce(Vector2.up * jumpforce);
+			//transform.Rotate(0, 0, rotateSpeed * Time.deltaTime);
 			grounded = false;
 		}
 	}

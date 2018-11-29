@@ -8,34 +8,39 @@ public class Movement : MonoBehaviour {
 	public GameObject character;
 
 	private Rigidbody2D characterBody;
-	private float ScreenWidth;
+	//private float ScreenWidth;
 
 	void Start () {
-		ScreenWidth = Screen.width;
+		//enabled = true;
+		//ScreenWidth = Screen.width;
 		characterBody = character.GetComponent<Rigidbody2D>();
 	}
 	
 
-	void Update () {
-		int i = 0;
-		while (i < Input.touchCount)
-		{
-			if(Input.GetTouch (i).position.x > ScreenWidth/2){
-				RunCharacter(2.0f);
-			}
-			if(Input.GetTouch (i).position.x < ScreenWidth/2){
-				RunCharacter(-2.0f);
-			}
-		}
+	// void Update () {
+	// 	int i = 0;
+	// 	while (i < Input.touchCount)
+	// 	{
+	// 		if(Input.GetTouch (i).position.x > ScreenWidth/2){
+	// 			RunCharacter(2.0f);
+	// 		}
+	// 		if(Input.GetTouch (i).position.x < ScreenWidth/2){
+	// 			RunCharacter(-2.0f);
+	// 		}
+	// 	}
+	// }
+
+	// void FixedUpdate() {
+	// 	#if UNITY_EDITOR
+	// 	RunCharacter(Input.GetAxis("Horizontal"));
+	// 	#endif
+	// }
+
+	public void RunCharacterRight(float horizontalInput = 2.5f){
+		characterBody.AddForce(new Vector2(horizontalInput * moveSpeed * Time.deltaTime, 0));
 	}
 
-	void FixedUpdate() {
-		#if UNITY_EDITOR
-		RunCharacter(Input.GetAxis("Horizontal"));
-		#endif
-	}
-
-	private void RunCharacter(float horizontalInput){
+	public void RunCharacterLeft(float horizontalInput = -2.5f){
 		characterBody.AddForce(new Vector2(horizontalInput * moveSpeed * Time.deltaTime, 0));
 	}
 }
