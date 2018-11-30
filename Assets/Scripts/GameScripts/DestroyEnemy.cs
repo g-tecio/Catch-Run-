@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class DestroyEnemy : MonoBehaviour {
 
@@ -15,7 +15,7 @@ public class DestroyEnemy : MonoBehaviour {
     		GameObject effectObj = Instantiate(DeathEffectObj, other.contacts[0].point, Quaternion.identity);
     		Destroy(effectObj, 1.5f);
     		Destroy(other.gameObject);
-			//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+			GameObject.Find("GameManager").GetComponent<GameManager>().GameOver();
     	}
 	}
 }

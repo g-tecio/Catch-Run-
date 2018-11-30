@@ -39,6 +39,18 @@ public class Player : MonoBehaviour {
     		Destroy(other.gameObject);
 		}
 	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if(other.gameObject.tag == "CoinPlus"){
+    		Destroy(other.gameObject);
+			addScore();
+		}
+	}
+
+	void addScore(){
+		GameObject.Find("GameManager").GetComponent<ScoreManager>().AddScore(1);
+	}
 	
 
 }
