@@ -15,7 +15,7 @@ public class DestroyEnemy : MonoBehaviour {
     		GameObject effectObj = Instantiate(DeathEffectObj, other.contacts[0].point, Quaternion.identity);
     		Destroy(effectObj, 1.5f);
     		Destroy(other.gameObject);
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+			//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     	}
 	}
 }

@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour {
 
 	Rigidbody2D player;
+	public GameObject destroyObstacleObj;
 
 	bool grounded;
 	public float jumpforce;
@@ -27,24 +27,16 @@ public class Player : MonoBehaviour {
 		}
 	}
 
-	// public void MovePlayerRight(){
-	// 	if(touchButton == false){
-	// 		player.AddForce(new Vector2(dirX * moveSpeed * Time.deltaTime, 0));
-	// 		touchButton = true;
-	// 	}
-	// }
-
-	// public void MovePlayerLeft(){
-	// 	if(touchButton == true){
-	// 		player.AddForce(new Vector2(dirLessX * moveSpeed * Time.deltaTime, 0));
-	// 		touchButton = false;
-	// 	}
-	// }
-
 	private void OnCollisionEnter2D(Collision2D other) {
 		if(other.gameObject.tag == "Bottom")
 		{
 			grounded = true;
+		}
+
+		if(other.gameObject.tag == "Enemy"){
+			GameObject effectObj = Instantiate(destroyObstacleObj, other.contacts[0].point, Quaternion.identity);
+    		Destroy(effectObj, 1.5f);
+    		Destroy(other.gameObject);
 		}
 	}
 	

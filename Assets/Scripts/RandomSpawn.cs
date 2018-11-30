@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RandomSpawn : MonoBehaviour {
 
-	public GameObject prefab1, prefab2, prefab3;
+	public GameObject prefab1, prefab2, prefab3, prefab4;
 
 	public float spawnRate = 2f;
 
@@ -27,6 +27,9 @@ public class RandomSpawn : MonoBehaviour {
 					break;
 				case 3: 
 					Instantiate(prefab3, transform.position, Quaternion.identity);
+					break;
+				case 4: 
+					Instantiate(prefab4, transform.position, Quaternion.identity);
 					break;
 			}
 			nextSpawn = Time.time + spawnRate; 

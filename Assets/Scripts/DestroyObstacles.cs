@@ -10,10 +10,14 @@ public class DestroyObstacles : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Enemy")
     	{
-
     		GameObject effectObj = Instantiate(destroyObstacleObj, other.contacts[0].point, Quaternion.identity);
     		Destroy(effectObj, 1.5f);
     		Destroy(other.gameObject);
+			addScore();
     	}
+	}
+
+	void addScore(){
+		GameObject.Find("GameManager").GetComponent<ScoreManager>().AddScore(1);
 	}
 }
