@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RandomSpawn : MonoBehaviour {
 
-	public GameObject prefab1, prefab2, prefab3, prefab4, coinSprite;
+	public GameObject prefab1, prefab2, prefab3, prefab4, coinSprite, platformSprite;
 
 	public float spawnRate = 2f;
 
@@ -15,7 +15,7 @@ public class RandomSpawn : MonoBehaviour {
 	void Update () {
 		if (Time.time > nextSpawn)
 		{
-			whatToSpawn = Random.Range(1, 6);
+			whatToSpawn = Random.Range(1, 7);
 
 			switch (whatToSpawn)
 			{
@@ -33,6 +33,9 @@ public class RandomSpawn : MonoBehaviour {
 					break;
 				case 5: 
 					Instantiate(coinSprite, transform.position, Quaternion.identity);
+					break;
+				case 6: 
+					Instantiate(platformSprite, transform.position, Quaternion.identity);
 					break;
 			}
 			nextSpawn = Time.time + spawnRate; 

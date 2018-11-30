@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour {
 		yield return new WaitForSecondsRealtime(0.1f);
 		Time.timeScale = 0.1f;
 		yield return new WaitForSecondsRealtime(0.1f);
+		GetComponent<ScoreManager>().currentScoreText.color = Color.white;
 		gameOverPanel.SetActive(true);
 		
 		yield break;
