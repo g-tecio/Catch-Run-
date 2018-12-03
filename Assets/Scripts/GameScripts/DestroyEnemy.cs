@@ -16,6 +16,8 @@ public class DestroyEnemy : MonoBehaviour {
     		Destroy(effectObj, 1.5f);
     		Destroy(other.gameObject);
 			GameObject.Find("GameManager").GetComponent<GameManager>().GameOver();
+			GameObject buttons = GameObject.Find("Buttons");
+			buttons.SetActive(false);
     	}
 	}
 }
