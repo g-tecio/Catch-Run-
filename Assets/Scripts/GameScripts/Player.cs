@@ -33,6 +33,11 @@ public class Player : MonoBehaviour {
 			grounded = true;
 		}
 
+		if(other.gameObject.tag == "Platform")
+		{
+			grounded = true;
+		}
+
 		if(other.gameObject.tag == "Enemy"){
 			GameObject effectObj = Instantiate(destroyObstacleObj, other.contacts[0].point, Quaternion.identity);
     		Destroy(effectObj, 1.5f);

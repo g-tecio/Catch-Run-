@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 4750450604811718}
   - component: {fileID: 50933906273596922}
   - component: {fileID: 68094648181727490}
+  - component: {fileID: 114982177284168126}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Platform
@@ -321,6 +322,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathEffectObj: {fileID: 1836394920985828, guid: dad6472cf2ab74783bf22e21ef3059c6,
+    type: 2}
+--- !u!114 &114982177284168126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993407541166568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3415d2dc5bace4a11ad25fda95df9ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyObstacleObj: {fileID: 1719408546096312, guid: 9cac27e4816a84886bd67afb8f09cfa6,
     type: 2}
 --- !u!212 &212002034217173190
 SpriteRenderer:

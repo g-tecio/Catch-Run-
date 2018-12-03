@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DestroyEnemyPlatform : MonoBehaviour {
 
+	public GameObject destroyObstacleObj;
+
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.tag == "Enemy")
