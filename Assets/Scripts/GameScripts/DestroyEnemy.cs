@@ -19,5 +19,11 @@ public class DestroyEnemy : MonoBehaviour {
 			GameObject buttons = GameObject.Find("Buttons");
 			buttons.SetActive(false);
     	}
+
+		if(other.gameObject.tag == "Platform"){
+			GameObject effectObj = Instantiate(DeathEffectObj, other.contacts[0].point, Quaternion.identity);
+    		Destroy(effectObj, 1.5f);
+    		Destroy(other.gameObject);
+		}
 	}
 }

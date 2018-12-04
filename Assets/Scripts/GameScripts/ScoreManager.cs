@@ -6,11 +6,27 @@ using TMPro;
 public class ScoreManager : MonoBehaviour {
 
 	public TextMeshProUGUI currentScoreText;
+	public TextMeshProUGUI bestScoreText;
 	int currentScore = 0;
+
+	void Start()
+	{
+		GetBestScore();
+	}
+
+	void GetBestScore(){
+		bestScoreText.text = PlayerPrefs.GetInt("BestScore", 0).ToString();
+	}
 
 
 	public void AddScore(int score){
 		currentScore += score;
 		currentScoreText.text = currentScore.ToString();
+
+		if (currentScore > PlayerPrefs.GetInt("BestScore", 0))
+		{
+			bestScoreText.text = currentScore.ToString();
+			PlayerPrefs.SetInt("BestScore", currentScore);
+		}
 	}
 }

@@ -12,8 +12,6 @@ public class Player : MonoBehaviour {
 	public float dirX = 100f;
 	public float dirLessX = -100f;
 	public float moveSpeed = 300;
-	bool touchButton = false;
-	float rotateSpeed = 20.0f;
 
 	void Start () {
 		player = GetComponent<Rigidbody2D>();
@@ -48,8 +46,13 @@ public class Player : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if(other.gameObject.tag == "CoinPlus"){
+			addCoin();
     		Destroy(other.gameObject);
 		}
+	}
+
+	void addCoin(){
+		GameObject.Find("GameManager").GetComponent<CoinManager>().AddCoins(1);
 	}
 	
 
