@@ -353,8 +353,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathEffectObj: {fileID: 1836394920985828, guid: dad6472cf2ab74783bf22e21ef3059c6,
     type: 2}
-  DestroyPlatformObj: {fileID: 1418327849695946, guid: 93684bf9708e348688a4f97094580899,
-    type: 2}
 --- !u!114 &114982177284168126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -678,7 +676,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f35705ab00052495eb6ccf9c52ca541d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
