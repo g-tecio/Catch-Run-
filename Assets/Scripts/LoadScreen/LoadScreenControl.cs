@@ -8,6 +8,7 @@ using TMPro;
 public class LoadScreenControl : MonoBehaviour {
 
 	public GameObject loadScreenObj;
+	public GameObject buttonStart;
 	public Slider slider;
 	public TextMeshProUGUI progressText;
 	
@@ -19,6 +20,7 @@ public class LoadScreenControl : MonoBehaviour {
 	IEnumerator LoadingScreen(int sceneIndex){
 		
 		AsyncOperation async = SceneManager.LoadSceneAsync(sceneIndex);
+		buttonStart.SetActive(false);
 		loadScreenObj.SetActive(true);
 		while (!async.isDone)
 		{
