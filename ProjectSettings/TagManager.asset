@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Platform
   - CoinPlus
+  - Music
   layers:
   - Default
   - TransparentFX
