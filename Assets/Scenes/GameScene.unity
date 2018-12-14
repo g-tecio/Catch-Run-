@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 93869891}
   m_Layer: 5
   m_Name: Buttons
-  m_TagString: Untagged
+  m_TagString: Buttons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -559,6 +559,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e989c687a8ca49689538976cdc6bf62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawner1: {fileID: 707892019}
+  spawner2: {fileID: 329682795}
+  spawner3: {fileID: 1625492641}
+  spawner5: {fileID: 713547054}
+  spawner6: {fileID: 1915464234}
+  spawner7: {fileID: 308473225}
   currentScoreText: {fileID: 1635947663}
   bestScoreText: {fileID: 969823220}
 --- !u!4 &190792222
@@ -868,7 +874,7 @@ MonoBehaviour:
   coinSprite: {fileID: 1770843616082306, guid: b1d99531f98ab4995967273e0073dda5, type: 2}
   platformSprite: {fileID: 1993407541166568, guid: e1f54d3f7927a4e5fab50de0914bef5c,
     type: 2}
-  spawnRate: 2.5
+  spawnRate: 5.5
 --- !u!212 &308473227
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1953,7 +1959,7 @@ MonoBehaviour:
   coinSprite: {fileID: 1770843616082306, guid: b1d99531f98ab4995967273e0073dda5, type: 2}
   platformSprite: {fileID: 1993407541166568, guid: e1f54d3f7927a4e5fab50de0914bef5c,
     type: 2}
-  spawnRate: 2.5
+  spawnRate: 3.5
 --- !u!1 &774223723
 GameObject:
   m_ObjectHideFlags: 0
@@ -3413,7 +3419,7 @@ GameObject:
   - component: {fileID: 1087526323}
   m_Layer: 5
   m_Name: LeftButton
-  m_TagString: Untagged
+  m_TagString: Buttons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4646,7 +4652,7 @@ GameObject:
   - component: {fileID: 1732045867}
   m_Layer: 5
   m_Name: JumpButton
-  m_TagString: Untagged
+  m_TagString: Buttons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5467,7 +5473,7 @@ MonoBehaviour:
   coinSprite: {fileID: 1770843616082306, guid: b1d99531f98ab4995967273e0073dda5, type: 2}
   platformSprite: {fileID: 1993407541166568, guid: e1f54d3f7927a4e5fab50de0914bef5c,
     type: 2}
-  spawnRate: 2.5
+  spawnRate: 4.5
 --- !u!212 &1915464236
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5616,7 +5622,7 @@ GameObject:
   - component: {fileID: 1938130896}
   m_Layer: 5
   m_Name: RightButton
-  m_TagString: Untagged
+  m_TagString: Buttons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

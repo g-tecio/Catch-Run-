@@ -9,6 +9,7 @@ TagManager:
   - Platform
   - CoinPlus
   - Music
+  - Buttons
   layers:
   - Default
   - TransparentFX
