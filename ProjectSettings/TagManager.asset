@@ -10,6 +10,7 @@ TagManager:
   - CoinPlus
   - Music
   - Buttons
+  - Portal
   layers:
   - Default
   - TransparentFX
