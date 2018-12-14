@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class EnterPortal : MonoBehaviour {
 
+	private Transform destination;
 	public GameObject portal;
+	bool isRight;
+	bool isLeft;
 
 	// Use this for initialization
 	void Start () {
-		
+		if(isRight == false){
+			destination = GameObject.FindGameObjectWithTag("PortalLeft").GetComponent<Transform>();
+		}
 	}
 	
 	// Update is called once per frame
@@ -19,7 +24,7 @@ public class EnterPortal : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.tag == "Player"){
-			other.transform.position = portal.transform.position;
+			other.transform.position = new Vector2(destination.position.x, destination.position.y);
 		}
 	}
 }
